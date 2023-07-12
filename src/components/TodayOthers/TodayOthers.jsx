@@ -146,7 +146,6 @@ function TodayOthers(props) {
   return (
     <div className="others">
       <div className="othersBody">
-        <h3>Today's Highlights</h3>
         <div className="bigBox">
           {/* -----temp----- */}
           <div className="temp">

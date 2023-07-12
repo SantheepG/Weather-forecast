@@ -6,8 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Main.css";
 import TodayMain from "../TodayMain/TodayMain";
-import TodayOthers from "../TodayOthers/TodayOthers";
-
+import Wind from "../Wind/Wind";
+import Temp from "../Temp/Temp";
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +34,7 @@ class Main extends Component {
       weather_description: "",
       cloud_icon: "",
 
-      //Frodcast Array
+      //Forecast Array
       frodcast_array: [],
     };
     this.searchChangHandler = this.searchChangHandler.bind(this);
@@ -42,7 +42,7 @@ class Main extends Component {
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  //Default location --London GB
+  //Default location -
   componentDidMount() {
     this.callApi(this.state.lat, this.state.lng);
   }
@@ -161,6 +161,16 @@ class Main extends Component {
         </div>
 
         <div className="content">
+          <Temp
+            className="temp"
+            temp={this.state.current_temp}
+            min_temp={this.state.min_temp}
+            max_temp={this.state.max_temp}
+            feels_like={this.state.real_feel}
+            temp_array={this.state.frodcast_array}
+            timezone={this.state.time_zone}
+            dt={this.state.dt}
+          />
           <TodayMain
             className="todayMain"
             city={this.state.city}
@@ -171,17 +181,10 @@ class Main extends Component {
             cloud_icon={this.state.cloud_icon}
             weather_description={this.state.weather_description}
           />
-          <TodayOthers
-            className="todayOthers"
-            temp={this.state.current_temp}
-            min_temp={this.state.min_temp}
-            max_temp={this.state.max_temp}
-            feels_like={this.state.real_feel}
-            temp_array={this.state.frodcast_array}
+          <Wind
+            className="wind"
             wind_speed={this.state.widnd_speed}
             wind_deg={this.state.wind_deg}
-            sun_rise={this.state.sun_rise}
-            sunset={this.state.sunset}
             humidity={this.state.humidity}
             visibility={this.state.visibility}
             timezone={this.state.time_zone}

@@ -1,6 +1,8 @@
-.others {
+.wind-box {
+    display: flex;
     width: 66%;
-    margin-right: 55px;
+    margin-right: 15%;
+    
     
     background-color: rgba(0,0,0,0.2);
     background-size: cover;
@@ -12,12 +14,12 @@
 
   }
   @media (max-width: 1700px) {
-    .others {
-      width: 60%;
+    .wind-box {
+      width: 20%;
     }
   }
   @media (max-width: 615px) {
-    .others {
+    .wind-box {
       width: 100%;
       margin-top: 1em;
       padding: 0;
@@ -26,11 +28,7 @@
       padding: 1em;
     }
   }
-  .others h3 {
-    width: 97%;
-    margin: auto;
-    margin-bottom: 1em;
-  }
+
   .bigBox {
     width: 98%;
     margin: auto;
@@ -42,10 +40,8 @@
       width: 100%;
     }
   }
-  .temp,
-  .wind,
-  .sun {
-    width: 28%;
+  .wind{
+    width: 90%;
     height: 15em;
     border-radius: 30px;
     background-color: rgba(0,0,0,0.3);
@@ -56,76 +52,18 @@
     /* opacity: 0.75; */
   }
   @media (max-width: 1400px) {
-    .temp,
-    .wind,
-    .sun {
+
+    .wind {
       width: 27%;
     }
   }
   /* ----- temp ---- */
   
-  .chart {
-    width: 95%;
-    margin: auto;
-    display: flex;
-    height: 5em;
-    justify-content: space-between;
-  }
-  
-  .chart .bar {
-    border-radius: 50px;
-    margin-top: 5em;
-    transform: translateY(-100%);
-    flex-direction: column;
-    width: 5px;
-    background-color: rgb(130, 130, 130);
-  }
-  .chart .bar:nth-child(10) {
-    background-color: rgb(0, 155, 252);
-  }
-  .chart .bar:nth-child(9) {
-    background-color: rgba(0, 155, 252, 0.546);
-  }
-  .chart .bar:nth-child(8) {
-    background-color: rgba(0, 155, 252, 0.273);
-  }
-  .chart .bar:nth-child(11) {
-    background-color: rgba(0, 155, 252, 0.546);
-  }
-  .chart .bar:nth-child(12) {
-    background-color: rgba(0, 155, 252, 0.273);
-  }
-  .curentTemp {
-    width: 95%;
-    margin: auto;
-    margin-top: 2em;
-    display: flex;
-    justify-content: space-between;
-  }
-  .tempNow p {
-    font-weight: 600;
-  }
-  .tempNow .tempValue {
-    display: inline-flex;
-    margin-top: 0.2em;
-    font-size: 2.5rem;
-  }
-  @media (max-width: 1500px) {
-    .tempNow .tempValue {
-      font-size: 1.6rem;
-    }
-  }
-  .tempValue span {
-    font-weight: 200;
-  }
-  .minmaxtemp p {
-    margin-top: 1em;
-  }
   /* ----- wind ----- */
   
   .windMeter {
     margin: auto;
-    width: 14em;
+    width: 12em;
     height: 10em;
   }
   @media (max-width: 1400px) {
@@ -138,76 +76,26 @@
     font-weight: 600;
   }
   /* ----- sun ----- */
-  
-  .sunMeter {
-    margin: auto;
-    width: 14em;
-    height: 11em;
-  }
-  @media (max-width: 1400px) {
-    .sunMeter {
-      width: 13em;
-    }
-  }
-  .sunMeter .riseAndSetTimes {
-    width: 110%;
-    position: relative;
-    top: -90px;
-    display: flex;
-    font-size: 1rem;
-    margin-left: -0.6em;
-    justify-content: space-between;
-  }
-  .sunMeter .riseAndSetIcons {
-    margin-left: -0.38em;
-    width: 106%;
-    position: relative;
-    top: -105px;
-    display: flex;
-    font-size: 1rem;
-    justify-content: space-between;
-  }
-  @media (max-width: 1400px) {
-    .sunMeter .riseAndSetTimes {
-      top: -70px;
-    }
-    .sunMeter .riseAndSetIcons {
-      top: -80px;
-    }
-  }
-  @media (max-width: 615px) {
-    .bigBox {
-      flex-direction: column;
-    }
-    .temp,
-    .wind,
-    .sun {
-      width: 90%;
-      margin: auto;
-      margin-top: 0.5em;
-      
-    }
-  }
+
   /* ----- bottom part ----- */
   .smallBox {
-    width: 98%;
+    width: 95%;
     margin: auto;
     display: flex;
     margin-top: 1em;
     justify-content: space-between;
   }
-  .feelslike,
-  .humidity,
-  .visibility {
-    width: 28%;
-    height: 3.5em;
+ 
+  .humidity{
+    width: 85%;
+    height: 4.5em;
     border-radius: 20px;
     background-color: rgba(0,0,0,0.3);
     padding: 1em;
     background-size: 0%;
     box-shadow:  1px 1px 4px #0b0b0b,
     -1px -3px 4px #0000006f;
-    padding-bottom: 2em;
+    padding-bottom: 2.3em;
   }
   @media (max-width: 1400px) {
     .feelslike,
@@ -217,7 +105,7 @@
     }
   }
   .smallBox .flexBox {
-    width: 97%;
+    width: 98%;
     display: flex;
     margin: auto;
     margin-top: -0.3em;
@@ -279,22 +167,15 @@
     width: 50%;
     margin-top: -2em;
   }
-  
-  .visibility .flexBox .value {
+  .flexBox .value {
     font-size: 1.3rem;
-  }
-  .visibility .visDescription {
-    width: 50%;
-    margin-top: -2em;
   }
   
   @media (max-width: 615px) {
     .smallBox {
       flex-direction: column;
     }
-    .feelslike,
-    .humidity,
-    .visibility {
+    .humidity {
       width: 90%;
       margin: auto;
       margin-top: 0.5em;
@@ -302,10 +183,7 @@
     .humidity .flexBox .humDescription p {
       font-size: 0.9rem;
     }
-    .feelslike .flexBox p {
-      font-size: 0.9rem;
-    }
-    .visibility .visDescription {
+    .flexBox p {
       font-size: 0.9rem;
     }
   }
