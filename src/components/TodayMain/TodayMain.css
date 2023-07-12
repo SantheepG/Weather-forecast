@@ -11,11 +11,11 @@
       padding: 3em 2em 2em 3em;
       box-shadow:  1px 1px 5px #0b0b0b,
                -1px -2px 3px #0000006f;
-               border: 2px solid red;         
+                        
     }
     @media (max-width: 1700px) {
       .today {
-        width: 24%;
+        width: 20%;
       }
     }
     @media (max-width: 615px) {
@@ -33,7 +33,7 @@
       font-weight: 300;
     }
     .todayWeatherImage img {
-      width: 40%;
+      width: 70%;
       margin-top: 3%;
       margin: auto;
       display: block;
